@@ -1,0 +1,17 @@
+[tool.poetry]
+package-mode = false
+name = "ai-translator-api"
+version = "0.1.0"
+description = "AI-powered translator API"
+authors = ["moliinyk maks.oliynik228@gmail.com"]
+
+[tool.poetry.dependencies]
+python = ">=3.11"
+fastapi = "^0.116.1"
+python-dotenv = "^1.1.1"
+uvicorn = "^0.35.0"
+pytest = "^8.4.1"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

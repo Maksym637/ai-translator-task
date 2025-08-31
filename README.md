@@ -11,3 +11,18 @@ Your task is to build a prototype of an application that enables automated trans
 4. Running Locally: The application should be set up to run on a local machine. Provide clear instructions on how to set up and run the application.
 5. Documentation: Prepare a short document detailing your approach to solving the business problem, the design and architecture of your application, and instructions on how to set it up and run it locally. Describe briefly potential risks, biases, and ethical implications of the model of your choice.
 - - -
+### Project description
+TODO
+- - -
+### Project execution
+To run project via __docker-compose__ use the following command:
+```bash
+docker-compose \
+  --env-file env/.api.env \
+  --env-file env/.common.env \
+  up --build
+```
+- - -
+### Test execution
+TODO
+- - -
