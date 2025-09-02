@@ -2,7 +2,7 @@
 An AI-powered translator app with BE and FE parts that provides real-time text translation through a clean user interface
 - - -
 ### Task Objective
-Your task is to build a prototype of an application that enables automated transaltions between the following languages: `["de", "en", "el", "es", "fr", "it", "pl", "pt", "ro", ""nl"]`
+Your task is to build a prototype of an application that enables automated transaltions between the following languages: `["de", "en", "el", "es", "fr", "it", "pl", "pt", "ro", "nl"]`
 - - -
 ### Task details and deliverables
 1. Model Choice: Choose an appropriate machine learning model or API that can perform the translation task. You may use pre-trained models or APIs available in libraries or platforms of your choice.

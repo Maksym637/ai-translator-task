@@ -1,17 +1,19 @@
-import os
-from dotenv import load_dotenv
 from fastapi import FastAPI
-
-
-load_dotenv()
+from fastapi.middleware.cors import CORSMiddleware
+from routes.translator import translator_router
+from config import settings
 
 
 app = FastAPI(
-    title=f"ai-translator-api-{os.getenv('ENV')}",
+    title=f"ai-translator-api-{settings.ENV}",
     description="An AI-powered translator API that provides real-time text translation",
 )
 
+app.include_router(translator_router)
 
-@app.get("/translator")
-def perform_translation():
-    return {"message": "Hello AI-powered translator!"}
+app.add_middleware(
+    CORSMiddleware,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
