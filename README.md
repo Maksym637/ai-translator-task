@@ -15,7 +15,54 @@ Your task is to build a prototype of an application that enables automated trans
 TODO
 - - -
 ### Project execution
-To run project via __docker-compose__ use the following command:
+Before executing the project, fill in the following files in the `env` folder:
+- `.api.env`:
+```ini
+ENV=<env>
+API_HOST=<api host>
+API_PORT=<api port>
+AZURE_AI_KEY=<azure ai key>
+AZURE_AI_REGION=<azure ai region>
+```
+- `.client.env`:
+```ini
+ENV=<env>
+CLIENT_HOST=<client host>
+CLIENT_PORT=<client port>
+```
+#### Local execution:
+__BE execution__
+1. Go to the `ai_translator_api` dir
+2. Install all dependencies using the command below:
+```bash
+poetry install
+```
+3. Activate poetry using the command below:
+```bash
+poetry env list --full-path
+```
+```bash
+source [poetry env path]/bin/activate
+```
+4. Launch the BE part using the command below:
+```bash
+uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+```
+
+__FE execution__
+1. Go to the `ai_translator_client` dir
+2. Install all dependencies using the command below:
+```bash
+npm install
+```
+3. Launch the FE part using the command below:
+```bash
+npm run dev
+```
+
+#### Docker execution
+1. Install Docker into your system
+2. Launch project via _docker-compose_ using the command below:
 ```bash
 docker-compose \
   --env-file env/.api.env \
@@ -24,5 +71,10 @@ docker-compose \
 ```
 - - -
 ### Test execution
-TODO
+To execute tests, follow these steps:
+1. Install all dependencies and activate poetry as described earlier in the local execution section
+2. Execute tests using the command below:
+```bash
+PYTHONPATH=. pytest
+```
 - - -
