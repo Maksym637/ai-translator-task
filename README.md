@@ -12,7 +12,15 @@ Your task is to build a prototype of an application that enables automated trans
 5. Documentation: Prepare a short document detailing your approach to solving the business problem, the design and architecture of your application, and instructions on how to set it up and run it locally. Describe briefly potential risks, biases, and ethical implications of the model of your choice.
 - - -
 ### Project description
-TODO
+The following application is a simplified version of a translator built on the Azure Translator API.
+
+This application uses dependencies provided below:
+- __BE:__
+    - Python 3.11
+    - Poetry 2.1.4
+- __FE:__
+    - Node.js v22 + npm v10
+- Docker 28.3.2
 - - -
 ### Project execution
 Before executing the project, fill in the following files in the `env` folder:
@@ -21,6 +29,7 @@ Before executing the project, fill in the following files in the `env` folder:
 ENV=<env>
 API_HOST=<api host>
 API_PORT=<api port>
+ORIGIN_PORT=<origin port>
 AZURE_AI_KEY=<azure ai key>
 AZURE_AI_REGION=<azure ai region>
 ```
@@ -60,13 +69,13 @@ npm install
 npm run dev
 ```
 
-#### Docker execution
+#### Docker execution:
 1. Install Docker into your system
 2. Launch project via _docker-compose_ using the command below:
 ```bash
 docker-compose \
   --env-file env/.api.env \
-  --env-file env/.common.env \
+  --env-file env/.client.env \
   up --build
 ```
 - - -

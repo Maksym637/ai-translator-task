@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #f3f4f6;
+}
+
+/* Header */
+.app-header {
+  background: #5091d2;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 16px;
+}
+
+/* Main content */
+.translator-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
+
+.translation-panel {
+  flex: 1;
+  display: flex;
+  gap: 16px;
+}
+
+.panel-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  text-align: center;
+  color: #30577d;
+}
+
+/* Text areas */
+.input-text {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: none;
+}
+
+.output-box {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f9fafb;
+  overflow-y: auto;
+}
+
+.placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+.output-text {
+  font-size: 1.1rem;
+}
+
+/* Language selectors */
+.lang-selectors {
+  display: flex;
+  gap: 16px;
+}
+
+.lang-select {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+}
+
+.lang-select select {
+  margin-top: 4px;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+/* The "Perform translation" button */
+.translate-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #5091d2;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.translate-btn:hover {
+  background-color: #1e40af;
+}
+
+.translate-btn:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .translation-panel {
+    flex-direction: column;
+  }
+}
