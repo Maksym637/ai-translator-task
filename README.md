@@ -87,3 +87,6 @@ To execute tests, follow these steps:
 PYTHONPATH=. pytest
 ```
 - - -
+### Demonstration
+[Click here to see how application works](https://youtu.be/E-AGZXG_pc4?si=gd53tRXZvNu2HlL7)
+- - -
